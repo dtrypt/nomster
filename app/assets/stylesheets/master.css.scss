@@ -34,4 +34,17 @@ h1, h2, h3, h4, h5 {
     font-family: 'kaushan_scriptregular', sans-serif;
     color: #ff0000;
     font-size: 26px;
+    text-decoration: none;
+    }
+
+.paginate_text {
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+a {
+    color: #12FFFF;
+    text-decoration: underline;
     }

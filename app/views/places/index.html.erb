@@ -4,5 +4,10 @@
     <i class="address"><%= place.address %></i><br /><br />
     <p class="descrip"><%= place.description %></p><br />
   </div>
-
 <% end %>
+
+<br style="clear:both;" />
+
+<div class="paginate_text">
+<%= will_paginate @places %>
+</div>
