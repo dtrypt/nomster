@@ -32,6 +32,8 @@ gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 
 gem 'will_paginate', '~> 3.1.0'
+
+gem 'simple_form'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
