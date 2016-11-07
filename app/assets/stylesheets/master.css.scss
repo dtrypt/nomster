@@ -1,7 +1,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background: url('/assets/dark_exa_@2X.png');
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .black_box {
-  border:1px solid #000;
+  border:1px solid #ff0000;
   margin-bottom: 15px;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #12FF12;
+  font-family: 'kaushan_scriptregular', sans-serif;
+}
+
+.address {
+  color: #12FF12;
+}
+
+.descrip {
+  color: #12FFFF;
+}
+
+.navbar.navbar-inverse {
+    background: url('/assets/dark_exa.png');
+      border-radius: 0;
+        box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-header {
+    font-family: 'Impact', sans-serif;
 }
