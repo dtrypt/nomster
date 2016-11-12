@@ -6,7 +6,7 @@ root 'places#index'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 resources :places do
-  resources :comments, only: :create
+  resources :comments, :photos, only: :create
 end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
