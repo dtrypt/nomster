@@ -34,6 +34,7 @@ h4, h5 {
     background: url('/assets/dark_exa.png');
       border-radius: 0;
         box-shadow: 0px 1px 3px #2a2a2a;
+        margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-brand {
@@ -125,4 +126,28 @@ figcaption {
   caption-side: bottom ;
   text-align: center;
   padding-bottom: 15px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 75%;
+    max-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.glyphicon {
+  color: red;
+}
+
+.carousel-caption {
+  font-family: 'kaushan_scriptregular', sans-serif;
+  font-size: 50px;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: red;
+       text-shadow: rgba(0,0,0,0.95) 2px 2px;
+           background-color: rgba(0,0,0,0.5);
+        width: 75%;
+        position:absolute;
+        left: 12.5%;
 }
