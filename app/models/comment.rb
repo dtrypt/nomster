@@ -4,11 +4,11 @@ class Comment < ActiveRecord::Base
   after_create :send_comment_email
 
   RATINGS = {
-    'one star' => 'one star',
-    'two stars' => '2 stars',
-    'three stars' => '3 stars',
-    'four stars' => '4 stars',
-    'five stars' => '5 stars'
+    '1 star' => '1_star',
+    '2 stars' => '2_stars',
+    '3 stars' => '3_stars',
+    '4 stars' => '4_stars',
+    '5 stars' => '5_stars'
   }
 
     def humanized_rating
