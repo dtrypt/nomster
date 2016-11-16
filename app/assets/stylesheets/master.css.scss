@@ -12,13 +12,13 @@ body {
   margin-bottom: 15px;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3 {
   color: #12FF12;
   font-family: 'kaushan_scriptregular', sans-serif;
 }
 
 h4, h5 {
-  color: #ff0000;
+  color: white;
   font-family: 'kaushan_scriptregular', sans-serif;
 }
 
@@ -151,4 +151,10 @@ figcaption {
         width: 75%;
         position:absolute;
         left: 12.5%;
+}
+
+.move_center{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }

@@ -1,4 +1,60 @@
+<div class="red_box col-xs-10 col-xs-offset-1">
+<div class="col-xs-6 move_center">
+<%= image_tag 'user.png'%>
 <h1><%= @user.email %></h1>
+</div>
+<div class="col-xs-6 move_center">
 <h3> Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
-<h4><%= @user.comments.count %> total comments</h4>
-<h4><%= @user.comments.where(rating: '5 stars').count %> total 5 star reviews</h4>
+<h4><%= @user.places.count %> total Places added</h4>
+<h4><%= @user.comments.count %> total Comments</h4>
+<h4><%= @user.comments.where(rating: '5 stars').count %> total 5 star Reviews</h4>
+</div>
+  <div class="clear"></div>
+</div>
+  <div class="clear"></div>
+<br/>
+
+<h2 class="text-center"> My Places</h2>
+<br/>
+<% @user.places.each do |place| %>
+  <div class="red_box col-xs-8 col-xs-offset-2">
+    <h1><%= link_to place.name, place_path(place) %></h1>
+    <i class="address"><%= place.address %></i><br /><br />
+    <p class="descrip"><%= place.description %></p>
+
+    <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
+    <% if place.comments.present? %>
+
+    <blockquote>
+      <% if place.comments.first.humanized_rating.present? %>
+        <b><%= place.comments.first.humanized_rating %></b> -
+      <% end %>
+      <%= place.comments.first.message %>
+      <small><%= place.comments.first.user.email %></small>
+    </blockquote>
+
+  <% end %>
+  </div>
+  <% end %>
+  <div class="clear"></div>
+
+<h2 class="text-center"> My Comments</h2>
+<br/>
+<% @user.comments.each do |comment| %>
+  <div class="col-xs-12 col-sm-6">
+    <div class="red_box">
+  <h3 class="text-center">
+  <%= link_to comment.place.name, place_path(comment.place) %>
+  </h3>
+    <blockquote>
+      <% if comment.humanized_rating.present? %>
+        <b><%= comment.humanized_rating %></b> -
+      <% end %>
+      <%= comment.message %>
+      <small><%= comment.user.email %></small>
+    </blockquote>
+    </div>
+  </div>
+  <% end %>
